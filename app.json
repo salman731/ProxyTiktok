@@ -10,7 +10,8 @@
     "repository": "https://github.com/pablouser1/ProxiTok",
     "env": {
         "APP_URL": {
-            "description": "Your instance url (example: https://proxitok.herokuapp.com)"
+            "description": "https://proskitok.herokuapp.com/"
+            "value": "https://proskitok.herokuapp.com/"
         },
         "API_CACHE": {
             "description": "Cache system in use",
