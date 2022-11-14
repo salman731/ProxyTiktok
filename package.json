@@ -1,0 +1,20 @@
+{
+   "name": "ProxyTiktok",
+   "version": "1.0.0",
+   "description": "",
+   "scripts": {
+       "build": "echo \"No build specified\" && exit 1",
+       "test": "echo \"No test specified\" && exit 1",
+       "start": "node index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/salman731/ProxyTiktok.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/salman731/ProxyTiktok/issues"
+    },
+    "homepage": "https://github.com/salman731/ProxyTiktok#readme"
+}
