@@ -8,8 +8,7 @@ use App\Models\SettingsTemplate;
 
 class SettingsController {
     static public function index() {
-        $latte = Wrappers::latte();
-        $latte->render(Misc::getView('settings'), new SettingsTemplate());
+        Wrappers::latte('settings', new SettingsTemplate());
     }
 
     static public function general() {
@@ -19,6 +18,7 @@ class SettingsController {
         }
         self::redirect();
     }
+
     static public function api() {
         // TODO, ADD COUNT
         if (isset($_POST['api-test_endpoints'])) {

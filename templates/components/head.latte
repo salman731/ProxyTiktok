@@ -6,13 +6,14 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="{path('/favicon-32x32.png')}">
 	<link rel="icon" type="image/png" sizes="16x16" href="{path('/favicon-16x16.png')}">
 	<link rel="manifest" href="{path('/site.webmanifest')}">
-	<meta property="og:title" content="ProxiTok" />
+	<meta property="og:site_name" content="ProxiTok" />
+	<meta property="og:title" content="{$title}" />
 	<meta property="og:description" content="Alternative frontend for TikTok" />
 	<meta property="og:type" content="website" />
 	{if isset($has_rss)}
 		<link rel="alternate" type="application/rss+xml" title="{$title}" href="{$_SERVER['REQUEST_URI'] . '/rss'}" />
 	{/if}
-	<link rel="stylesheet" href="{path('/styles/vendor/cssgg.min.css')}">
-	<link rel="stylesheet" href="{path('/styles/vendor/bulma.min.css')}">
+	<link rel="stylesheet" href="{static('css', 'cssgg.min.css', true)}">
+	<link rel="stylesheet" href="{static('css', 'bulma.min.css', true)}">
 	<title>{$title} - ProxiTok</title>
 </head>

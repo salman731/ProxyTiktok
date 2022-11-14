@@ -2,7 +2,6 @@
 /** @var \Bramus\Router\Router $router */
 
 use App\Helpers\ErrorHandler;
-use App\Helpers\Misc;
 use App\Helpers\Wrappers;
 use App\Models\BaseTemplate;
 
@@ -11,18 +10,15 @@ $router->set404(function () {
 });
 
 $router->get('/', function () {
-    $latte = Wrappers::latte();
-    $latte->render(Misc::getView('home'), new BaseTemplate('Home'));
+    Wrappers::latte('home', new BaseTemplate('Home'));
 });
 
 $router->get('/about', function () {
-    $latte = Wrappers::latte();
-    $latte->render(Misc::getView('about'), new BaseTemplate('About'));
+    Wrappers::latte('about', new BaseTemplate('About'));
 });
 
 $router->get('/verify', function () {
-    $latte = Wrappers::latte();
-    $latte->render(Misc::getView('verify'), new BaseTemplate('Verify'));
+    Wrappers::latte('verify', new BaseTemplate('verify'));
 });
 
 $router->get('/stream', 'ProxyController@stream');
@@ -57,6 +53,7 @@ $router->mount('/settings', function () use ($router) {
     $router->get('/', 'SettingsController@index');
     $router->post('/general', 'SettingsController@general');
     $router->post('/api', 'SettingsController@api');
+    $router->post('/misc', 'SettingsController@misc');
 });
 
 $router->get('/discover', 'DiscoverController@get');
